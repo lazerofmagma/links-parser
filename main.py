@@ -12,4 +12,4 @@ class LinkParser(TelegraphParser):
             self.output_file.write_data(link, url)
 
 
-run_parser(LinkParser, titles=[''], output_file=[{'link': {}, 'url': {}}])
+run_parser(LinkParser, titles=[''], output_file={'pattern': {'link': {}, 'url': {}}})
