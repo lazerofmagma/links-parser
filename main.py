@@ -1,4 +1,4 @@
-from tuparser import TELEGRAPH_URL, TelegraphParser, run_parser
+from tuparser import TELEGRAPH_URL, TelegraphParser, YamlOutputFile, run_parser
 
 
 class LinkParser(TelegraphParser):
@@ -12,4 +12,4 @@ class LinkParser(TelegraphParser):
             self.output_file.write_data(link, url)
 
 
-run_parser(LinkParser, titles=[''], output_file={'pattern': {'link': {}, 'url': {}}})
+run_parser(LinkParser, titles=[''], output_file=YamlOutputFile(pattern={'link': {}, 'url': {}}))
